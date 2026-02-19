@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f5f2;
+  --card: #ffffff;
+  --accent: #6b4f3a;
+  --accent-light: #f1e5d8;
+  --text: #1e1e1e;
+  --muted: #666;
+  --border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 440px) 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem 2rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  resize: vertical;
+  font: inherit;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#summary {
+  color: var(--muted);
+  margin: 0;
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.page {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: linear-gradient(180deg, #fff, #fcfaf7);
+}
+
+.page-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.page-title {
+  margin: 0.5rem 0;
+  color: var(--accent);
+}
+
+.page-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.page-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
