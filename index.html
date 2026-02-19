@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guideline Book Builder для сети кофеен</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Guideline Book Builder</h1>
+      <p>
+        Введите свои мысли в свободной форме, а приложение распределит текст по
+        пунктам и страницам книги для сети кофеен.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="card input-card">
+        <label for="rawInput">Ваше сообщение</label>
+        <textarea
+          id="rawInput"
+          placeholder="Например: Бариста должны приветствовать гостей в течение 5 секунд. Молоко хранить при +2...+4°C."
+        ></textarea>
+        <button id="buildButton">Сформировать гайдлайн-бук</button>
+      </section>
+
+      <section class="card output-card">
+        <div class="output-header">
+          <h2>Структура книги</h2>
+          <p id="summary"></p>
+        </div>
+        <div id="bookContainer" class="book-container"></div>
+      </section>
+    </main>
+
+    <template id="pageTemplate">
+      <article class="page">
+        <div class="page-meta">
+          <span class="section-name"></span>
+          <span class="page-number"></span>
+        </div>
+        <h3 class="page-title"></h3>
+        <ul class="page-list"></ul>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

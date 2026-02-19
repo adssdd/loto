@@ -1,0 +1,9 @@
+{
+  "name": "guideline-book-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coffee shop guideline book builder",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
